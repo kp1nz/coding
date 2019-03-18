@@ -27,24 +27,6 @@ public class Kata {
         double[] arr = new double[numbers.length-1];
         int count = 0;
         for (double a:
-             list) {
-            arr[count]=a;
-            count++;
-        }
-        return arr;
-    }
-    public static double[] averages(double[] numbers) {
-
-        List<Double> list = new ArrayList<Double>();
-        for(int i =0;i<numbers.length-1;i++){
-            if (numbers[i]==0||numbers[i]==1||numbers.length==0||numbers==null){
-                return new double[0];
-            }
-            list.add(new Double((numbers[i]+numbers[i+1]))/2.0);
-        }
-        double[] arr = new double[numbers.length-1];
-        int count = 0;
-        for (double a:
                 list) {
             arr[count]=a;
             count++;
@@ -54,7 +36,7 @@ public class Kata {
 
     public static void main(String[] args) {
 
-        double[] averages = averages(new double[] { 2.0, 4.0, 3.0, -4.5 });
+        double[] averages = averages(new int[] { 2, 2, 2, 2, 2 });
         for (double a:
         averages) {
             System.out.print(a+",");
