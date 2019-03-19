@@ -1,4 +1,4 @@
-package kyu_6p;
+package kyu_5;
 
 import java.util.HashMap;
 import java.util.Map;
