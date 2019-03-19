@@ -22,5 +22,8 @@ public class 击鼓传花 {
         if (count == 0) return 1;
         if (count == 1) return 0;
         return 0;
+        /**
+         * ...
+         */
     }
 }
