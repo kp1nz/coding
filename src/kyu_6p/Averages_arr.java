@@ -1,3 +1,5 @@
+package kyu_6p;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,14 +16,14 @@ import java.util.List;
  * @author kp1nz
  * @create 2019-03-18 19:20
  */
-public class Kata {
+public class Averages_arr {
     public static double[] averages(int[] numbers) {
 
         List<Double> list = new ArrayList<Double>();
+        if (numbers==null||numbers.length<2||numbers.length==0){
+            return new double[0];
+        }
         for(int i =0;i<numbers.length-1;i++){
-            if (numbers[i]==0||numbers[i]==1||numbers.length==0||numbers==null){
-                return new double[0];
-            }
             list.add(new Double((numbers[i]+numbers[i+1]))/2.0);
         }
         double[] arr = new double[numbers.length-1];

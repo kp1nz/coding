@@ -1,3 +1,5 @@
+package kyu_6p;
+
 /**
  * A digital root is the recursive sum of all the digits in a number.
  * Given n, take the sum of the digits of n.

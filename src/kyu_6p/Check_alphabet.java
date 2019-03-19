@@ -1,3 +1,5 @@
+package kyu_6p;
+
 /**
  * 判断一个字符串是否包含全部字母表的字母
  * @author kp1nz

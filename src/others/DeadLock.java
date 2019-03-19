@@ -1,3 +1,5 @@
+package others;
+
 /**
  * 死锁Demo
  * @author kp1nz

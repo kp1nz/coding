@@ -1,8 +1,12 @@
+package kyu_6p;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
+ * 大整数（超int）乘法
+ *
  * @author kp1nz
  * @create 2019-03-13 18:41
  */

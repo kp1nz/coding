@@ -1,3 +1,5 @@
+package kyu_6p;
+
 /**
  * @author kp1nz
  * @create 2019-03-18 11:07

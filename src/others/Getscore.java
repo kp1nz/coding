@@ -1,7 +1,11 @@
+package others;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
 /**
+ * 字节跳动2019 牛牛妞妞求得分
+ *
  * @author kp1nz
  * @create 2019-03-14 19:37
  */

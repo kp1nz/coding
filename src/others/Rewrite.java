@@ -1,26 +1,30 @@
+package others;
+
 import java.util.Scanner;
 
 /**
+ * 字节跳动2019 修改字符串错误
+ *
  * @author kp1nz
  * @create 2019-03-16 11:00
  */
 public class Rewrite {
 
     public static void main(String[] args) {
-//        Scanner in = new Scanner(System.in);
-//        while (in.hasNextInt()) {
-//            int N = in.nextInt();//表示本次用例包括多少个代娇阳的字符串
-//            String str[] = new String[N];
-//            for (int i = 0; i < N; i++) {
-//                str[i] = in.next();
-//            }
-//            rewrite(str);
-//            for (int i=0;i<N;i++){
-//                System.out.println(str[i].toString());
-//            }
-//        }
-        String a = "woooow";
-        System.out.println(proofread_1(a));
+        Scanner in = new Scanner(System.in);
+        while (in.hasNextInt()) {
+            int N = in.nextInt();//表示本次用例包括多少个代娇阳的字符串
+            String str[] = new String[N];
+            for (int i = 0; i < N; i++) {
+                str[i] = in.next();
+            }
+            rewrite(str);
+            for (int i=0;i<N;i++){
+                System.out.println(str[i].toString());
+            }
+        }
+//        String a = "woooow";
+//        System.out.println(proofread_1(a));
     }
 
     private static String[] rewrite(String[] strings) {

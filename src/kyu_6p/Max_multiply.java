@@ -1,3 +1,5 @@
+package kyu_6p;
+
 import java.util.*;
 
 /**
