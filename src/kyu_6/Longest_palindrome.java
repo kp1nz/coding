@@ -1,14 +1,22 @@
-package kyu_5;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Stack;
+package kyu_6;
 
 /**
+ * Find the length of the longest substring in the given string s
+ * that is the same in reverse.
+ *
+ * As an example, if the input was “I like racecars that go fast”,
+ * the substring (racecar) length would be 7.
+ *
+ * "a" -> 1
+ * "aab" -> 2
+ * "abcde" -> 1
+ * "zzbaabcd" -> 4
+ * "" -> 0
+ *
  * @author kp1nz
  * @create 2019-03-19 18:32
  */
-public class longest_palindrome {
+public class Longest_palindrome {
     public static int longestPalindrome(final String s) {
         if (s == "") {
             return 0;
@@ -29,7 +37,7 @@ public class longest_palindrome {
 
                 //第三个条件判断是否为回文数
                 if (sbr.indexOf(maxSub) != -1
-                        &&maxSub.length()<sb.length()
+                        &&maxSub.length()<=sb.length()
                         &&s.indexOf(maxSub)+sbr.indexOf(maxSub)+maxSub.length()==s.length()) {
                     System.out.println("The max equals substring is :" + maxSub);
                     isSearched = true;

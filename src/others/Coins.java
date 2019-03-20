@@ -1,4 +1,4 @@
-package kyu_6p;
+package others;
 
 import java.util.Scanner;
 
