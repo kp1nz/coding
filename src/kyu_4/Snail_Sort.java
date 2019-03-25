@@ -98,10 +98,5 @@ public class Snail_Sort {
         for (int i = 0; i < snail.length; i++) {
             System.out.print(snail[i]);
         }
-
-//        System.out.println(array.length);
-//        for (int a = 0;a<array.length;a++){
-//            System.out.println(array[a].length);
-//        }
     }
 }
