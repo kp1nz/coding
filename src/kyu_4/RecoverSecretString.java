@@ -1,34 +1,53 @@
 package kyu_4;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.*;
 
 /**
+ * https://www.codewars.com/kata/53f40dff5f9d31b813000774/train/java
+ *
+ * ...
+ *
  * @author kp1nz
  * @create 2019-03-26 21:33
  */
 public class RecoverSecretString {
     public static String recoverSecret(char[][] triplets) {
 
-        LinkedList<Integer> list = new LinkedList<Integer>();
+        LinkedList<Character> list1 = new LinkedList<Character>();
+        LinkedList<Character> list2 = new LinkedList<Character>();
+        LinkedList<Character> list3 = new LinkedList<Character>();
         HashMap map = new HashMap();
-        for(int i =0;i<triplets.length;i++){
-            for (int j=0;j<triplets[i].length;j++){
-                list.add((int)triplets[i][j]);
-            }
+        Set set = new HashSet();
+        for (int i = 0; i < triplets.length; i++) {
+            list1.add(triplets[i][0]);
+            list2.add(triplets[i][1]);
+            list3.add(triplets[i][2]);
         }
-        list.sort(new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return o1-o2;
-            }
-        });
-        System.out.println(list.get(0));
-        System.out.println(list.get(1));
-        System.out.println(list.get(2));
+        get(list1, list2, list3);
+
         return null;
     }
+
+
+    public static void get(List<Character> list1,
+                           List<Character> list2,
+                           List<Character> list3) {
+
+        Stack stack = new Stack();
+        for (int i = 0; i < list1.size(); i++) {
+            if (!list2.contains(list1.get(i))) {
+                stack.push(list1.get(i));
+                list1.remove(list1.get(i));
+                int i1 = list1.indexOf(list1.get(i));
+        }
+        }
+        System.out.println(stack.pop());
+        for (Character a :
+                list1) {
+            System.out.print(a);
+        }
+    }
+
 
     public static void main(String[] args) {
         recoverSecret(new char[][]{
