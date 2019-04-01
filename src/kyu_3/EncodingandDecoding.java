@@ -8,6 +8,4 @@ package kyu_3;
  */
 public class EncodingandDecoding {
 
-    public static void main(String[] args) {
-    }
 }
