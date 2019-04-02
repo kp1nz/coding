@@ -23,7 +23,7 @@ public class Bigint_Multiply {
             e.printStackTrace();
         }
     }
-    private static String multiply(String data){
+    public static String multiply(String data){
         String[] data2 = data.split(" ");
         char[] char1 = data2[0].toCharArray();
         char[] char2 = data2[1].toCharArray();//将大整数字符串转换为字符数组，以便于对单个数字进行操作；

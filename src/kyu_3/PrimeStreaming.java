@@ -8,6 +8,12 @@ import java.util.stream.IntStream;
  *
  *     int[] found = Primes.stream().skip(skip).limit(limit).toArray();
  *
+ * https://www.codewars.com/kata/prime-streaming-nc-17/
+ *
+ * 进阶版
+ *
+ * https://www.codewars.com/kata/prime-streaming-pg-13/train/java
+ *
  * @author kp1nz
  * @create 2019-04-01 14:33
  */

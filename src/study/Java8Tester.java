@@ -185,6 +185,7 @@ public class Java8Tester {
             sum += (int)numbers.get(i);
         }
         return sum;
+
     }
 
     private static int getAverage(List<Integer> numbers){
