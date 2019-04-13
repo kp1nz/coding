@@ -44,5 +44,6 @@ public class 爬楼梯 {
         System.out.println(countWays(3));
         System.out.println(countWays(4));
         System.out.println(countWays(5));
+        System.out.println(countWays(121));
     }
 }
