@@ -8,7 +8,7 @@ public class ZigZagConversion {
 
     public static String convert(String s, int numRows) {
 
-        if (s == null || s.length() == 0) return s;
+        if (s == null || s.length() == 0 ||numRows ==1) return s;
         StringBuilder[] sb = new StringBuilder[numRows];
         for (int i = 0; i < numRows; i++) {
             sb[i] = new StringBuilder();
@@ -33,6 +33,6 @@ public class ZigZagConversion {
     }
 
     public static void main(String[] args) {
-        System.out.println(convert("PAYPALISHIRIN", 3));
+        System.out.println(convert("ABCCC", 1));
     }
 }
