@@ -2,7 +2,7 @@ package kata
 
 //5 https://www.codewars.com/kata/josephus-permutation/train/go
 func Josephus(items []interface{}, k int) []interface{} {
-	//按题意需要处理空切片且返回的切片长度和容量需要都为空
+	//按题意需要处理空切片且返回切片的长度和容量需要都为空
 	res := []interface{}{}
 	ch := make(chan interface{}, len(items))
 	for _, v := range items {
