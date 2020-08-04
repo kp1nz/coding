@@ -17,12 +17,13 @@ public class _3 {
             if (!chars.containsKey(s.charAt(i))) {
                 def++;
             } else {
-                // 更新起始指针
-                st = i;
-                if (chars.get(s.charAt(i)) + 1 != st) def++;
+                if (chars.get(s.charAt(i)) < st)
+                    // 区间前重复
+                    def++;
                 else {
-                    Integer index = chars.get(s.charAt(i));
-                    def = i - index;
+                    // 更新起始指针
+                    st = chars.get(s.charAt(i));
+                    def = i - st;
                 }
             }
             max = Math.max(def, max);
@@ -32,6 +33,6 @@ public class _3 {
     }
 
     public static void main(String[] args) {
-        System.out.println(lengthOfLongestSubstring("abcabcbb"));
+        System.out.println(lengthOfLongestSubstring("gbggghjjjh"));
     }
 }
