@@ -3,6 +3,7 @@ package Java.leetcode;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * dfs 复制图
@@ -38,6 +39,21 @@ public class _133 {
                 dfs(n);
             }
         }
+    }
+
+    // 大神的解法 清晰易懂
+    public Node cloneGraph1(Node node) {
+        Map<Node, Node> lookup = new HashMap<>();
+        return dfs(node, lookup);
+    }
+
+    private Node dfs(Node node, Map<Node,Node> lookup) {
+        if (node == null) return null;
+        if (lookup.containsKey(node)) return lookup.get(node);
+        Node clone = new Node(node.val, new ArrayList<>());
+        lookup.put(node, clone);
+        for (Node n : node.neighbors)clone.neighbors.add(dfs(n,lookup));
+        return clone;
     }
 
     // Definition for a Node.
