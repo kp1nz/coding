@@ -26,8 +26,10 @@ public class _647 {
         return true;
     }
 
-    // 动态规划
-    // 时间复杂度和空间复杂度均是O(n ^ 2)，其中n为所给字符串的长度。
+    /**
+     * 动态规划
+     * 时间复杂度和空间复杂度均是O(n ^ 2)，其中n为所给字符串的长度。
+      */
     public int countSubstrings2(String s) {
         int count = 0, len = s.length();
         boolean[][] dp = new boolean[len][len];
@@ -48,26 +50,34 @@ public class _647 {
         return count;
     }
 
-    // 分别计算长度为奇数和偶数的回文子串数量
-    // 对于奇数回文串，从某个字符向两边扩张。
-    // 对于偶数回文串，从某两个字符向两边扩张。
-    // 时间复杂度在最差情况下是O(n ^ 2)，其中n为所给字符串的长度。空间复杂度是O(1)。
-    private int result = 0;
+    /**
+     * 分别计算长度为奇数和偶数的回文子串数量
+     * 对于奇数回文串，从某个字符向两边扩张。
+     * 对于偶数回文串，从某两个字符向两边扩张。
+     * 时间复杂度在最差情况下是O(n ^ 2)，其中n为所给字符串的长度。空间复杂度是O(1)。
+      */
+    private static int result = 0;
 
-    public int countSubstrings3(String s) {
+    public static int countSubstrings3(String s) {
         for (int i = 0; i < s.length(); i++) {
-            countSubstrings(s, i, i);               //回文串长度为奇数
-            countSubstrings(s, i, i + 1);     //回文串长度为偶数
+            //回文串长度为奇数
+            countSubstrings(s, i, i);
+            //回文串长度为偶数
+            countSubstrings(s, i, i + 1);
         }
         return result;
     }
 
-    private void countSubstrings(String s, int left, int right) {
+    private static void countSubstrings(String s, int left, int right) {
         while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
             left--;
             right++;
             result++;
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(countSubstrings3("aaa"));
     }
 
 
