@@ -7,12 +7,8 @@ import java.util.Arrays;
  * @Date: 2020/8/20 11:49
  */
 public class _529 {
-    // lei
+    // 雷
     static int x = 0;
-
-    static class block {
-        char left;
-    }
 
     public static char[][] updateBoard(char[][] board, int[] click) {
         if (board[click[0]][click[1]] == 'M') {
