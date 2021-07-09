@@ -29,10 +29,7 @@ public class ttt {
         stack.push(new Time(input.charAt(0), 1));
         for (int i = 1; i < input.length(); i++) {
             char word = input.charAt(i);
-            if (stack.peek().word == word)
                 stack.peek().times ++;
-            else
-                stack.push(new Time(word, 1));
             if (stack.peek().times == 2 && stack.size() > 1) {
                 Time top = stack.pop();
                 if (stack.peek().times == 1) count++;
