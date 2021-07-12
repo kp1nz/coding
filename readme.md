@@ -1,2 +1,3 @@
-﻿
-##### CodeWars & 有趣的题 & LeetCode...
+- CodeWars
+- LeetCode
+- other mess
