@@ -1,4 +1,4 @@
-package Java.leetcode.normal;
+package Java.leetcode.normal._1easy;
 
 /**
  * @Author: kp1nz

@@ -1,12 +1,15 @@
-package Java.leetcode.normal;
+package Java.leetcode.normal._2mid;
 
 /**
+ * 输入：nums1 = [1,3], nums2 = [2]
+ * 输出：2.00000
+ * 解释：合并数组 = [1,2,3] ，中位数 2
  * @Author: kp1nz
  * @Date: 2020/8/17 2:38 下午
  */
 public class _4 {
     // odd medianIndex: (len1 + len2 + 1) / 2
-    // even medianIndex: (len1 + len2 + 1) / 2 (len1 + len2 + 1) / 2 + 1
+    // even medianIndex: (len1 + len2 + 1) / 2 + (len1 + len2 + 1) / 2 + 1
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int n = nums1.length + nums2.length;
         if (n % 2 == 1) {

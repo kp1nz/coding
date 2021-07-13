@@ -1,4 +1,4 @@
-package Java.leetcode.normal;
+package Java.leetcode.normal._2mid;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package Java.leetcode.normal;
+package Java.leetcode.normal._1easy;
 
 /*
 * 搜索插入位置 二分查找

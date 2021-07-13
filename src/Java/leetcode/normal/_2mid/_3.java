@@ -1,4 +1,4 @@
-package Java.leetcode.normal;
+package Java.leetcode.normal._2mid;
 
 import java.util.HashMap;
 
@@ -31,7 +31,24 @@ public class _3 {
         return max;
     }
 
+    public static int lengthOfLongestSubstringBetter(String s) {
+        int len = s.length();
+        if (len == 0) return 0;
+        if (len == 1) return 1;
+        //记录字符所在的index
+        int[] record = new int[128];
+        int start = 0;
+        int max = 0;
+        for (int i = 0; i < len; i++) {
+            int index = s.charAt(i);
+            start = Math.max(start, record[index] );
+            max = Math.max(max, i - start + 1);
+            record[index] = i + 1;
+        }
+        return max;
+    }
+
     public static void main(String[] args) {
-        System.out.println(lengthOfLongestSubstring("aaa"));
+        System.out.println(lengthOfLongestSubstringBetter("nm"));
     }
 }
