@@ -3,6 +3,13 @@ package Java.leetcode.normal._2mid;
 import java.util.HashMap;
 
 /**
+ * 3. 无重复字符的最长子串
+ *
+ * 示例 1:
+ *
+ * 输入: s = "abcabcbb"
+ * 输出: 3
+ * 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
  * @Author: kp1nz
  * @Date: 2020/8/2 11:17 下午
  */
