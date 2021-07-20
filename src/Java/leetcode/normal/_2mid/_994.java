@@ -1,5 +1,7 @@
 package Java.leetcode.normal._2mid;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -14,6 +16,7 @@ public class _994 {
         if (check(grid))
             return 0;
         Queue<int[]> ints = new LinkedList<>();
+        Queue<int[]> backups = new LinkedList<>();
         int m = grid.length;
         int n = grid[0].length;
         for (int i = 0; i < m; i++) {
@@ -26,7 +29,12 @@ public class _994 {
         int[] x = new int[]{1, -1, 0, 0};
         int[] y = new int[]{0, 0, 1, -1};
         int mins = 0;
-        while (!ints.isEmpty()) {
+        while (!ints.isEmpty() || !backups.isEmpty()) {
+            if (ints.isEmpty()){
+                while (!backups.isEmpty())
+                    ints.offer(backups.poll());
+                mins++;
+            }
             int[] poll = ints.poll();
             int ox = poll[0];
             int oy = poll[1];
@@ -34,10 +42,13 @@ public class _994 {
                 int nx = ox + x[i];
                 int ny = oy + y[i];
                 if (nx >=0 && ny >=0 && nx < m && ny < n && grid[nx][ny] == 1){
-                    mins++;
                     grid[nx][ny] = 2;
+                    backups.offer(new int[]{nx,ny});
                 }
             }
+        }
+        for (int i = 0; i < grid.length; i++) {
+            System.out.println(Arrays.toString(grid[i]));
         }
         if (check(grid))
             return mins;
@@ -56,6 +67,6 @@ public class _994 {
     }
 
     public static void main(String[] args) {
-        int i = orangesRotting(new int[][]{{2, 1, 1}, {1, 1, 0}, {0, 1, 1}});
+        System.out.println(orangesRotting(new int[][]{{2, 1, 1}, {1, 1, 0}, {0, 1, 1}}));
     }
 }
