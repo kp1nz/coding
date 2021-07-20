@@ -1,4 +1,4 @@
-package Java.leetcode.normal;
+package Java.leetcode.normal._4unsorted;
 
 /**
  * 有序数组的平方 双指针
