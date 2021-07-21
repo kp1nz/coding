@@ -56,6 +56,6 @@ public class _3 {
     }
 
     public static void main(String[] args) {
-        System.out.println(lengthOfLongestSubstringBetter("nm"));
+        System.out.println(lengthOfLongestSubstringBetter("abcad"));
     }
 }

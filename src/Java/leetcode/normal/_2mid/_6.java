@@ -1,5 +1,6 @@
 package Java.leetcode.normal._2mid;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -19,7 +20,29 @@ import java.util.Arrays;
  * @Date: 2021/7/15 2:53 PM
  */
 public class _6 {
+
+    public static String convert1(String s, int numRows) {
+        if (numRows < 2) return s;
+        ArrayList<StringBuilder> strs = new ArrayList<>();
+        for (int i = 0; i < numRows; i++) {
+            strs.add(new StringBuilder());
+        }
+        int row = 0, flag = -1;
+        for (int i = 0; i < s.length(); i++) {
+            if (row == 0 || row == numRows - 1)
+                flag = -flag;
+            strs.get(row).append(s.charAt(i));
+            row += flag;
+        }
+        StringBuilder sb = new StringBuilder();
+        for (StringBuilder str : strs){
+            sb.append(str);
+        }
+        return sb.toString();
+    }
+
     /**
+     * 数学解法
      * numRows -> pox = 2(numRows - 2)*2+2=2numRows-2
      * numRows = 3
      * -->
@@ -99,6 +122,6 @@ public class _6 {
     }
 
     public static void main(String[] args) {
-        System.out.println(convert("PAYPALISHIRING", 4));
+        System.out.println(convert1("PAYPALISHIRING", 3));
     }
 }
