@@ -37,7 +37,6 @@ public class _46 {
             res.add(new ArrayList<>(path));
             return;
         }
-
         for (int i = 0; i < len; i++) {
             if (!used[i]) {
                 path.addLast(nums[i]);
