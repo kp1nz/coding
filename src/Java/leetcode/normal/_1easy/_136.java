@@ -38,9 +38,6 @@ public class _136 {
     }
 
     public static void main(String[] args) {
-        System.out.println(2^1);
-        System.out.println(3^2);
-        System.out.println(1^1);
         _136 v = new _136();
         System.out.println(v.singleNumberBetter(new int[]{2,1,5,5,1}));
     }
