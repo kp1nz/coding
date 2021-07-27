@@ -1,4 +1,4 @@
-package Java.leetcode.normal._4unsorted;
+package Java.leetcode.normal._2mid;
 
 /**
  * 旋转数组 双指针

@@ -1,4 +1,4 @@
-package Java.leetcode.normal._4unsorted;
+package Java.leetcode.normal._2mid;
 
 import java.util.ArrayList;
 import java.util.HashMap;

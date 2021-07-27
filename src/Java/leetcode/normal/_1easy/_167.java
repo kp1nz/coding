@@ -1,4 +1,4 @@
-package Java.leetcode.normal._4unsorted;
+package Java.leetcode.normal._1easy;
 
 /**
  * 两数之和 II - 输入有序数组

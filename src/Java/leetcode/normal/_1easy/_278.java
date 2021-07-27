@@ -1,4 +1,4 @@
-package Java.leetcode.normal._4unsorted;
+package Java.leetcode.normal._1easy;
 
 /*
 * 第一个错误的版本，二分查找 
