@@ -15,4 +15,18 @@ public class _1 {
         }
         return null;
     }
+
+    public int[] twoSumBetter(int[] nums, int target) {
+        for (int i = 0, j = i + 1; i < nums.length - 1; ) {
+            if (nums[i] + nums[j] == target) {
+                return new int[]{i, j};
+            }
+            j++;
+            if (j == nums.length){
+                i++;
+                j=0;
+            }
+        }
+        return null;
+    }
 }
